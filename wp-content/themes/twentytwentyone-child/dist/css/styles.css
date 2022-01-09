@@ -893,3 +893,23 @@ body {
     display: none;
   }
 }
+
+.employees {
+  margin-top: 50px;
+  padding-top: 50px;
+  margin-bottom: 100px;
+  border-top: 1px solid #b2b3b4;
+}
+
+.employees__wrapper.preloader {
+  text-align: center;
+}
+
+.employees__item img {
+  width: 100%;
+  height: auto;
+}
+
+.employees__button {
+  text-align: center;
+}
