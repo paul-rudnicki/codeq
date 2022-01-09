@@ -11,6 +11,10 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <title>Codeq</title>
+    <script>
+			var admin_ajax_url = '<?php echo admin_url('admin-ajax.php') ?>';
+			var ajax_nonce = '<?php echo wp_create_nonce('ajax-nonce') ?>';
+		</script>
     <?php wp_head() ?>
   </head>
   <body>
@@ -26,7 +30,7 @@
   			</div>
   		</div>
   	</header>
-		<div class="container">
+		<section class="container">
 			<div class="row">
 				<div class="col-12">
 					<div class="content">
@@ -88,7 +92,20 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
+
+		<section class="employees">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="employees__wrapper">
+							<div class="employees__button"><span class="btn btn-primary" data-id="<?php echo get_the_ID() ?>"><?php _e('Pokaż pracowników', 'codeq') ?></span></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
 		<?php wp_footer() ?>
   </body>
 </html>
